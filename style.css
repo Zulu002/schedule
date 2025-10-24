@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'YourFont';
+    src: url('fonts/Norse-Bold.ttf') format('truetype');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F5FAFE;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'YourFont';
+    text-align: left;
+    color: #5546F9;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.divider {
+    height: 3px;
+    background: #060612;
+    margin: 10px 0;
+}
+
+.date {
+    font-family: 'YourFont';
+    text-align: left;
+    color: #060612;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.week-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.week-label {
+    font-family: 'YourFont';
+    font-size: 1.3em;
+    color: #5546F9;
+    font-weight: bold;
+}
+
+.next-week {
+    font-family: 'YourFont';
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Стили для карточек дней */
+.days-container {
+    margin-bottom: 20px;
+}
+
+.day-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.day-card.today {
+    border-color: #5546F9;
+    background: #f8f7ff;
+}
+
+.day-header {
+    font-family: 'YourFont';
+    font-size: 1.4em;
+    color: #060612;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.lessons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lesson {
+    background: #F5FAFE;
+    border-radius: 8px;
+    padding: 12px;
+    border-left: 4px solid #5546F9;
+}
+
+.lesson.лекция {
+    border-left-color: #5546F9;
+}
+
+.lesson.практика {
+    border-left-color: #46f96d;
+}
+
+.lesson.лабораторная {
+    border-left-color: #f946a5;
+}
+
+
+.lesson-time {
+    font-family: 'YourFont';
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.lesson-subject {
+    font-family: 'YourFont';
+    font-size: 1.1em;
+    color: #060612;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.lesson-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.lesson-type {
+    font-family: 'YourFont';
+}
+
+.lesson-room {
+    font-family: 'YourFont';
+}
+
+.hint {
+    font-family: 'YourFont';
+    padding: 15px;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #1565c0;
+    text-align: center;
+}
+
+.alert {
+    font-family: 'YourFont';
+    padding: 10px 15px;
+    background: #ffebee;
+    border: 1px solid #fcc2c8;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #c62828;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    to { 
+        opacity: 1;
+    }
+}
+
+.day-card {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.day-card:nth-child(1) { animation-delay: 0.1s; }
+.day-card:nth-child(2) { animation-delay: 0.2s; }
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .week-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .day-card {
+        padding: 12px;
+    }
+    
+    .lesson {
+        padding: 10px;
+    }
+    
+    .lesson-details {
+        flex-direction: column;
+        gap: 3px;
+    }
+}
