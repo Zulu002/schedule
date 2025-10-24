@@ -91,10 +91,10 @@ h1 {
 .day-header {
     font-family: 'YourFont';
     font-size: 1.4em;
-    color: #060612;
+    color: #5546F9;
     margin-bottom: 12px;
     padding-bottom: 8px;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #060612;
 }
 
 .lessons-container {
