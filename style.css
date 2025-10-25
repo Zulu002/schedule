@@ -119,7 +119,6 @@ h1 {
     font-family: 'YourFont';
     font-size: 0.8em; /* уменьшено с 0.9em */
     color: #F3EEF3;
-    margin-bottom: 5px;
 }
 
 .lesson-subject {
@@ -127,7 +126,6 @@ h1 {
     font-size: 0.95em; /* уменьшено с 1.1em */
     color: #F3EEF3;
     font-weight: bold;
-    margin-bottom: 5px;
     line-height: 1.3; /* улучшает читаемость */
 }
 
@@ -144,32 +142,6 @@ h1 {
 
 .lesson-room {
     font-family: 'YourFont';
-}
-
-.hint {
-    font-family: 'YourFont';
-    background: #e3f2fd;
-    border: 1px solid #90caf9;
-    border-radius: 8px;
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    color: #1565c0;
-    text-align: center;
-    margin: 0 20px 15px 20px;
-}
-
-.alert {
-    font-family: 'YourFont';
-    background: #ffebee;
-    border: 1px solid #fcc2c8;
-    border-radius: 8px;
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    color: #c62828;
-    text-align: center;
-    margin: 0 20px 15px 20px;
 }
 
 @media (max-width: 480px) {
