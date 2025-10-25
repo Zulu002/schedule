@@ -124,31 +124,15 @@ function renderSchedule(weekNumber) {
     }
 }
 
-// Функция для проверки, сегодняшний ли это день
-function highlightToday() {
-    const now = new Date();
-    const todayName = now.toLocaleDateString('ru-RU', { weekday: 'long' });
-    const dayCards = document.querySelectorAll('.day-card');
-    
-    dayCards.forEach(card => {
-        const dayHeader = card.querySelector('.day-header');
-        if (dayHeader && dayHeader.textContent === todayName) {
-            card.classList.add('today');
-        }
-    });
-}
-
 // Основная функция инициализации
 document.addEventListener('DOMContentLoaded', function() {
     const currentWeek = updateDateAndWeek();
     renderSchedule(currentWeek);
-    highlightToday();
     
     // Обновляем каждые 24 часа
     setInterval(() => {
         const newWeek = updateDateAndWeek();
         renderSchedule(newWeek);
-        highlightToday();
     }, 24 * 60 * 60 * 1000);
 });
 
