@@ -1,6 +1,14 @@
 @font-face {
     font-family: 'YourFont';
-    src: url('fonts/Norse-Bold.ttf') format('truetype');
+    src: url('fonts/Comfortaa-Bold.ttf') format('truetype');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'YourFont2';
+    src: url('fonts/DREIFRAKTUR.TTF') format('truetype');
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -13,8 +21,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #F5FAFE;
+    background: #1E1D22;
     min-height: 100vh;
     padding: 20px;
 }
@@ -22,27 +29,27 @@ body {
 .container {
     max-width: 500px;
     margin: 0 auto;
-    padding: 20px;
+ 
 }
 
 h1 {
     font-family: 'YourFont';
     text-align: left;
-    color: #5546F9;
+    color: #F3EEF3;
     margin-bottom: 5px;
     font-size: 2em;
 }
 
 .divider {
     height: 3px;
-    background: #060612;
+    background: #F3EEF3;
     margin: 10px 0;
 }
 
 .date {
     font-family: 'YourFont';
     text-align: left;
-    color: #060612;
+    color: #F3EEF3;
     font-size: 1.5em;
     margin-bottom: 5px;
     font-weight: 500;
@@ -58,14 +65,14 @@ h1 {
 .week-label {
     font-family: 'YourFont';
     font-size: 1.3em;
-    color: #5546F9;
+    color: #FF4628;
     font-weight: bold;
 }
 
 .next-week {
     font-family: 'YourFont';
     font-size: 0.9em;
-    color: #666;
+    color: #F3EEF3;
 }
 
 /* Стили для карточек дней */
@@ -74,27 +81,23 @@ h1 {
 }
 
 .day-card {
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border: 2px solid #e0e0e0;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .day-card.today {
-    border-color: #5546F9;
-    background: #f8f7ff;
+    border-color: #FF4628;
+    background: rgba(255, 70, 40, 0.05);
 }
 
 .day-header {
     font-family: 'YourFont';
     font-size: 1.4em;
-    color: #5546F9;
+    color: #FF4628;
+    padding: 5px;
     margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #060612;
+    border-bottom: 3px solid #F3EEF3;
 }
 
 .lessons-container {
@@ -104,36 +107,35 @@ h1 {
 }
 
 .lesson {
-    background: #F5FAFE;
-    border-radius: 8px;
+    background: #323234;
     padding: 12px;
-    border-left: 4px solid #5546F9;
+    border-left: 5px solid #5546F9;
 }
 
 .lesson.лекция {
-    border-left-color: #5546F9;
+    border-left-color: #0890FE;
 }
 
 .lesson.практика {
-    border-left-color: #46f96d;
+    border-left-color: #FFA809;
 }
 
 .lesson.лабораторная {
-    border-left-color: #f946a5;
+    border-left-color: #C665F2;
 }
 
 
 .lesson-time {
     font-family: 'YourFont';
     font-size: 0.9em;
-    color: #666;
+    color: #F3EEF3;
     margin-bottom: 5px;
 }
 
 .lesson-subject {
     font-family: 'YourFont';
     font-size: 1.1em;
-    color: #060612;
+    color: #F3EEF3;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -142,7 +144,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     font-size: 0.9em;
-    color: #666;
+    color: #F3EEF3;
 }
 
 .lesson-type {
@@ -206,9 +208,6 @@ h1 {
         gap: 5px;
     }
     
-    .day-card {
-        padding: 12px;
-    }
     
     .lesson {
         padding: 10px;
