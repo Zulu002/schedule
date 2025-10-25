@@ -117,23 +117,24 @@ h1 {
 
 .lesson-time {
     font-family: 'YourFont';
-    font-size: 0.9em;
+    font-size: 0.8em; /* уменьшено с 0.9em */
     color: #F3EEF3;
     margin-bottom: 5px;
 }
 
 .lesson-subject {
     font-family: 'YourFont';
-    font-size: 1.1em;
+    font-size: 0.95em; /* уменьшено с 1.1em */
     color: #F3EEF3;
     font-weight: bold;
     margin-bottom: 5px;
+    line-height: 1.3; /* улучшает читаемость */
 }
 
 .lesson-details {
     display: flex;
     justify-content: space-between;
-    font-size: 0.9em;
+    font-size: 0.8em; /* уменьшено с 0.9em */
     color: #F3EEF3;
 }
 
@@ -189,5 +190,18 @@ h1 {
     .lesson-details {
         flex-direction: column;
         gap: 3px;
+    }
+    
+    /* Дополнительное уменьшение для мобильных */
+    .lesson-time {
+        font-size: 0.75em;
+    }
+    
+    .lesson-subject {
+        font-size: 0.9em;
+    }
+    
+    .lesson-details {
+        font-size: 0.75em;
     }
 }
